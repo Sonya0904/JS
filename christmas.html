@@ -2,11 +2,59 @@
 <html>
 <head>
     <title>js</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./styles/christmas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <script src="christmas.js"></script>
-</body>
 
+    <div class="layout">
+        <aside class="left-panel">
+          <h2>Выберите ёлку</h2>
+          <div class="tree-grid"> 
+          <div class="tree"> <img src="./images/tree1.png"></div>
+          <div class="tree"> <img src="./images/tree2.png"></div>
+          <div class="tree"> <img src="./images/tree3.png"></div>
+          <div class="tree"> <img src="./images/tree4.png"></div>
+        </div>
+    
+          <h2>Выберите фон</h2>
+          <div class="bg-grid"></div>
+    
+          <h2>Гирлянда</h2>
+          <div class="garland-grid"> </div>
+    
+          <div class="buttons">
+            <a class="button">Сохранить</a>
+            <a class="button">Сбросить настройки</a>
+          </div>
+        </aside>
+        <main class="tree-area">
+          <img src="./images/tree3 (1).png" class="main-tree" />
+        </main>
+        <aside class="right-panel">
+          <h2>Игрушки</h2>
+          <div class="toys-grid">
+          <div class="toy"> <img src="./images/red boll.png"></div>
+            <div class="toy"> <img src="./images/5295.png"></div>
+            <div class="toy"> <img src="./images/big boll with flower.png"></div>
+            <div class="toy"> <img src="./images/green boll with flower paint.png"></div>
+            <div class="toy"> <img src="./images/5298.png"></div>
+            <div class="toy"> <img src="./images/5299.png"></div>
+            <div class="toy"> <img src="./images/5300.png"></div>
+        </div>
+        </aside>
+    </div>
+
+
+
+    <script src="./scripts/christmas.js"></script>
+</body>
 
 </html>

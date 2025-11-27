@@ -99,7 +99,8 @@ let toys = [
     year: 1960,
     shape: "wap",
     color: "blue", size: "big",
-    favorite: false
+    favorite: false,
+    image: "./images/big boll with flower.png"
 },
 
 {
@@ -108,7 +109,8 @@ let toys = [
     year: 2000,
     shape: "wap",
     color: "green" , size: "big",
-    favorite: false
+    favorite: false,
+    image:"./images/green boll with flower paint"
 },
 {
     name: "red boll",
@@ -116,7 +118,8 @@ let toys = [
     year: 1990,
     shape: "wap",
     color: "red", size: "big",
-    favorite: false
+    favorite: false,
+    image: "./images/red boll.png"
 },
 
 {
@@ -130,6 +133,36 @@ let toys = [
 },
 
 ];
+
+toys = toys.map((toy, index) => {
+    return {
+        ...toy,
+        id: index + 1,
+    };
+});
+console.log('updated toys:', toys);
+
+let carenTree = {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 toys.forEach(toy=>{
     console.log(
@@ -180,22 +213,28 @@ let toyStore={
     }
 };
 
-let tree = {
-    type: "green", 
-    toys: [],
-    changeTree (newType) {
-      this. type = newType;
-},
- addToy(toy) {
-  this.toys.push(toy);
-},
+// let tree = {
+//     type: "green", 
+//     toys: [],
+//     changeTree (newType) {
+//       this. type = newType;
+// },
+//  addToy(toy) {
+//   this.toys.push(toy);
+// },
 
-clearToys() {
-  this.toys = [];
- }
-};
+// clearToys() {
+//   this.toys = [];
+//  }
+// };
 
-  
+// let tree_ = {
+//     type:"snow",
+//     height: "big",
+//     toysCount:12
+// };
+
+// Object.values(tree_);
 
 
 
