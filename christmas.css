@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/background.png');
+    background-image: url('../images/fon2.png');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -11,7 +11,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1;
-    background: url("../images/background.png") center/cover no-repeat;
+    background: url("../images/fon2.png") center/cover no-repeat;
 }
 
 .button {
@@ -50,8 +50,11 @@ body {
   background: url("../images/fon1.jpg") center/cover no-repeat;
 }
 
+.tree-area{
+  position: relative;
+}
+
 .main-tree{
-    padding-left: 28%;
     height: 890px;
 }
 
@@ -66,3 +69,27 @@ body {
   gap: 25px;
   flex-wrap: wrap;
 }
+
+.toy-on-tree {
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;  
+  z-index: 5;            
+}
+
+.garland-on-tree {
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 4;
+  animation: blink 1.6s infinite ease-in-out;
+}
+
+
+@keyframes blink {
+0%   { opacity: 1; }
+50%  { opacity: 0.3; }
+100% { opacity: 1; }
+}
+
+
