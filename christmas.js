@@ -300,7 +300,35 @@ saveTreeBtn.addEventListener("click", () => {
 
     const resultCurrentTreeJSON = JSON.stringify(resultCurrentTreeData);
     console.log(resultCurrentTreeJSON);
+
+     localStorage.setItem("savedTree", resultCurrentTreeJSON);
+  alert("Ёлка сохранена (в браузере)");
+
+  fetch("/save-tree", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: resultCurrentTreeJSON
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Ошибка при сохранении ёлки");
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log("Ответ сервера:", data);
+      console.log("Ёлка сохранена ");
+    })
+    .catch(error => {
+      console.error("Ошибка:", error);
+      console.error("Не удалось сохранить ёлку");
+    });
 });
+
+
+
 
 
 
@@ -379,8 +407,8 @@ treeArea.addEventListener("drop", e => {
     if (toy.count > 0) {
       toy.count--;
 
-      const xPos = x - 40;
-      const yPos = y - 40;
+      const xPos = x - 20;
+      const yPos = y - 20;
 
       placedCounter++;
       const placedId = placedCounter;
